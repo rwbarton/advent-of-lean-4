@@ -12,7 +12,7 @@ for scc in sccs do
       color == "shiny gold" ||
       List.any (rules.find! color) (λ rule => valid.find! rule.snd)
   | _ => panic! "cycle"
-pure $ (valid.toList.filter Prod.snd).length - 1 -- don't count "shiny gold" itself
+pure $ ((valid.toList.filter Prod.snd).length : Int) - 1 -- don't count "shiny gold" itself
 
 def parseRule (str : String) : String × List (Int × String) :=
 match str.splitOn " bags contain " with

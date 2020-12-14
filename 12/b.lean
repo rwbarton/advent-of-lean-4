@@ -5,7 +5,7 @@ dx dy : Int
 instance : Inhabited Ship := ⟨⟨0,0,1,0⟩⟩
 
 def fakeCos (n : Int) : Int :=
-match ((n / 90) % 4 + 4) % 4 with
+match (((n / 90) % 4 + 4) % 4 : Int) with
 | 0 => 1
 | 1 => 0
 | 2 => -1
