@@ -14,9 +14,9 @@ then g.get! (fromCoord x y z) else false
 
 def Grid.neighborCount (g : Grid) (x y z : Int) : Nat :=
 List.length $ do
-  let dx ← [-1, 0, 1]
-  let dy ← [-1, 0, 1]
-  let dz ← [-1, 0, 1]
+  let dx ← [(-1 : Int), 0, 1]
+  let dy ← [(-1 : Int), 0, 1]
+  let dz ← [(-1 : Int), 0, 1]
   if dx == 0 ∧ dy == 0 ∧ dz == 0 then []
   if g.get (x+dx) (y+dy) (z+dz) then [()] else []
 

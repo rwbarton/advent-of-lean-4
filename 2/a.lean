@@ -1,5 +1,6 @@
 structure Passwd where
-  min max : Int
+  min : Int
+  max : Int
   letter : Char
   str : String
 

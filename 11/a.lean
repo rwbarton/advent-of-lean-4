@@ -31,8 +31,8 @@ instance : Monad List :=
   bind := λ x f => (x.map f).join }
 
 def adjs (r c : Int) : List (Int × Int) := do
-let dr ← [-1, 0, 1]
-let dc ← [-1, 0, 1]
+let dr ← [(-1 : Int), 0, 1]
+let dc ← [(-1 : Int), 0, 1]
 if dr == 0 && dc == 0 then []
 pure (r + dr, c + dc)
 

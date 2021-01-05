@@ -1,6 +1,8 @@
 structure Ship :=
-x y : Int
-dx dy : Int
+x : Int
+y : Int
+dx : Int
+dy : Int
 
 instance : Inhabited Ship := ⟨⟨0,0,1,0⟩⟩
 

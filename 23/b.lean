@@ -1,6 +1,7 @@
 structure St where
   cur : Nat
-  next prev : Array Nat
+  next : Array Nat
+  prev : Array Nat
 
 def MAX : Nat := 1000000
 

@@ -6,7 +6,10 @@ open Std
 
 structure OrientedPiece where
   -- bits read from left to right or top to bottom in big-endian order
-  left right top bottom : Bits
+  left : Bits
+  right : Bits
+  top : Bits
+  bottom : Bits
   payload : Array (Array Bool)
 
 instance : ToString OrientedPiece where
